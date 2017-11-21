@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+
+
+
+
+<html class="theme-next gemini" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.3" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.3">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.3" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="作为一个多年的iOS开发者，而且喜欢自己没事的时候写点东西以供他人分享，都想要有一个属于自己的、网址上带有自己名字的博客，有的人用简书或者GitHub来写文章，不过那些都是第三方平台，不是自己的，只有属于自己的一个博客才会显得很酷很装逼有没有😝，OK接下来咱们开始搭建吧！">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo免费搭建一个属于自己的博客">
+<meta property="og:url" content="http://YoungerLi.com/2017/11/21/Hexo免费搭建一个属于自己的博客/index.html">
+<meta property="og:site_name" content="my_杨哥">
+<meta property="og:description" content="作为一个多年的iOS开发者，而且喜欢自己没事的时候写点东西以供他人分享，都想要有一个属于自己的、网址上带有自己名字的博客，有的人用简书或者GitHub来写文章，不过那些都是第三方平台，不是自己的，只有属于自己的一个博客才会显得很酷很装逼有没有😝，OK接下来咱们开始搭建吧！">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/4120931-5b31c3ac628564b8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/4120931-51990266dab56f41.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/4120931-8525599433d095b3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2017-11-21T07:44:54.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo免费搭建一个属于自己的博客">
+<meta name="twitter:description" content="作为一个多年的iOS开发者，而且喜欢自己没事的时候写点东西以供他人分享，都想要有一个属于自己的、网址上带有自己名字的博客，有的人用简书或者GitHub来写文章，不过那些都是第三方平台，不是自己的，只有属于自己的一个博客才会显得很酷很装逼有没有😝，OK接下来咱们开始搭建吧！">
+<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/4120931-5b31c3ac628564b8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.3',
+    sidebar: {"position":"left","display":"always","offset":12,"b2t":true,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://YoungerLi.com/2017/11/21/Hexo免费搭建一个属于自己的博客/"/>
+
+
+
+
+
+  <title>Hexo免费搭建一个属于自己的博客 | my_杨哥</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">my_杨哥</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://YoungerLi.com/2017/11/21/Hexo免费搭建一个属于自己的博客/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="YoungerLi">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/header.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="my_杨哥">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Hexo免费搭建一个属于自己的博客</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-21T11:39:09+08:00">
+                2017-11-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/iOS开发/" itemprop="url" rel="index">
+                    <span itemprop="name">iOS开发</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote>
+<p>作为一个多年的iOS开发者，而且喜欢自己没事的时候写点东西以供他人分享，都想要有一个属于自己的、网址上带有自己名字的博客，有的人用简书或者GitHub来写文章，不过那些都是第三方平台，不是自己的，只有属于自己的一个博客才会显得很酷很装逼有没有😝，OK接下来咱们开始搭建吧！</p>
+</blockquote>
+<a id="more"></a>
+<hr>
+<hr>
+<hr>
+<h1 id="一、前言"><a href="#一、前言" class="headerlink" title="一、前言"></a>一、前言</h1><p>该博客用的是<a href="https://hexo.io/zh-cn/docs/index.html" target="_blank" rel="external">Hexo</a>框架，基于Node.js，搭建博客首先需要有一个GitHub账号并且配置了SSH Keys（申请步骤这里就不介绍了，网上教程很多），然后在GitHub里创建一个名为username.github.io的仓库，还需要安装Git、安装Node.js、安装Hexo</p>
+<h1 id="二、准备工作"><a href="#二、准备工作" class="headerlink" title="二、准备工作"></a>二、准备工作</h1><h2 id="1、创建GitHub仓库"><a href="#1、创建GitHub仓库" class="headerlink" title="1、创建GitHub仓库"></a>1、创建GitHub仓库</h2><p>创建一个名为username.github.io的仓库<br>在GitHub中新建仓库相信你们都会，点击New repository创建，注意：仓库名称一定是<code>username.github.io</code>这种格式，username替换一个你喜欢的名字。<br><img src="http://upload-images.jianshu.io/upload_images/4120931-5b31c3ac628564b8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="username.github.io"></p>
+<h2 id="2、安装Git"><a href="#2、安装Git" class="headerlink" title="2、安装Git"></a>2、安装Git</h2><p>如果已安装可跳过<br>方法一、通过<a href="https://brew.sh/index_zh-cn.html" target="_blank" rel="external">HomeBrew</a>来安装<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">先安装HomeBrew（如果已安装可跳过）</span><br><span class="line">终端执行命令   $ /usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;</span><br><span class="line">然后安装git    $ brew install git</span><br></pre></td></tr></table></figure></p>
+<p>方法二、你也可以通过下载<a href="https://git-scm.com/downloads" target="_blank" rel="external">安装程序</a>来安装</p>
+<blockquote>
+<p>验证：执行<code>git --version</code>如果输出类似<code>git version 2.15.0</code>说明安装成功了</p>
+</blockquote>
+<h2 id="3、安装Node-js"><a href="#3、安装Node-js" class="headerlink" title="3、安装Node.js"></a>3、安装Node.js</h2><p>先安装nvm，这是Node.js版本管理器，可以轻松切换Node.js版本。 这里有两种方式安装。如果使用curl的方式安装，安装完成之后一定要重启终端。</p>
+<p>方法一、通过HomeBrew来安装（推荐）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ brew install node</span><br></pre></td></tr></table></figure></p>
+<p>方法二、curl安装方式<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ curl https://raw.github.com/creationix/nvm/master/install.sh | sh</span><br><span class="line">安装完成后，重启终端并执行下列命令即可安装 Node.js</span><br><span class="line">$ nvm install stable</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>验证：执行<code>npm --version</code>如果输出类似<code>5.5.1</code>说明安装成功了</p>
+</blockquote>
+<h2 id="4、安装Hexo"><a href="#4、安装Hexo" class="headerlink" title="4、安装Hexo"></a>4、安装Hexo</h2><p>所有必备的应用程序安装完成后，即可使用 npm 安装 Hexo<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g hexo-cli</span><br></pre></td></tr></table></figure></p>
+<h1 id="三、建站"><a href="#三、建站" class="headerlink" title="三、建站"></a>三、建站</h1><h2 id="1、创建资源"><a href="#1、创建资源" class="headerlink" title="1、创建资源"></a>1、创建资源</h2><p>安装 Hexo 完成后，在你喜欢的目录下新建一个文件夹命名为<code>username</code>（替换成你喜欢的名字），然后cd到username文件夹下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ cd username</span><br><span class="line">$ hexo init</span><br><span class="line">$ npm install</span><br></pre></td></tr></table></figure></p>
+<p>执行完毕后你将看到在你刚创建的文件夹下会有很多资源<br><img src="http://upload-images.jianshu.io/upload_images/4120931-51990266dab56f41.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="username"></p>
+<h2 id="2、基础配置"><a href="#2、基础配置" class="headerlink" title="2、基础配置"></a>2、基础配置</h2><p>接下来打开username下的<code>_config.yml</code>文件（上图中的第一个文件），修改一下里面几个关键的信息，修改完记得保存，注意：冒号后面要有空格。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">title: my_杨哥      //你博客的名字</span><br><span class="line">author: Li Yang    //你的名字</span><br><span class="line">language: zh-Hans  //语言-简体中文</span><br></pre></td></tr></table></figure></p>
+<p>上面这3个字段是关键信息，如需修改其他信息请参考<a href="https://hexo.io/zh-cn/docs/configuration.html" target="_blank" rel="external">配置</a></p>
+<h2 id="3、主题安装"><a href="#3、主题安装" class="headerlink" title="3、主题安装"></a>3、主题安装</h2><p>username下的<code>themes</code>文件夹中存放的是主题，默认的是landscape主题，如果你不喜欢可以安装其他主题。<br><strong>NexT</strong>主题是一套简约的主题，是目前使用最火的一个主题，下面我们安装一下该主题，你也可参考<a href="http://theme-next.iissnan.com/getting-started.html" target="_blank" rel="external">安装NexT</a>。<br>Hexo还有<a href="https://hexo.io/themes/" target="_blank" rel="external">更多主题</a>供你选择</p>
+<ul>
+<li><p>安装NexT主题：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ cd username        //进入到username文件夹下</span><br><span class="line">$ git clone https://github.com/iissnan/hexo-theme-next themes/next</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>启用NexT主题：<br>打开username下的<code>_config.yml</code>文件（上图中的第一个文件），找到<code>theme</code>字段将其值更改为<code>next</code></p>
+</li>
+<li><p>验证主题：<br><strong><em>注意：每次切换主题之后、验证主题之前都要清除 Hexo 的缓存</em></strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean    //清除缓存</span><br></pre></td></tr></table></figure>
+<p> 开始验证：启动Hexo本地服务器</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo s</span><br></pre></td></tr></table></figure>
+<p>然后你将会看到终端输出</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">INFO  Hexo is running at http://localhost:4000/. Press Ctrl+C to stop.</span><br></pre></td></tr></table></figure>
+<p>这行的意思是说你用浏览器打开 <a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a> 便可看到你的博客了，这只是本地的测试，如果测试没问题就执行Ctrl+C退出去，此时该地址就不能访问了。</p>
+</li>
+</ul>
+<p>OK，现在，你已经成功安装并启用了 NexT 主题。接下来就是对该主题的一些设置，详细可参考<a href="http://theme-next.iissnan.com/getting-started.html#theme-settings" target="_blank" rel="external">NexT主题设定</a></p>
+<h1 id="四、写作"><a href="#四、写作" class="headerlink" title="四、写作"></a>四、写作</h1><p>以上所有的工作都完成了，并设置了一套你自己喜欢的主题样式，接下来就可以写博客了。</p>
+<h2 id="1、新建一篇文章"><a href="#1、新建一篇文章" class="headerlink" title="1、新建一篇文章"></a>1、新建一篇文章</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new layout title</span><br></pre></td></tr></table></figure>
+<p>layout：模板，如果不写将使用默认模板，一般不写，直接<code>$ hexo new title</code><br>title：文章标题，如果标题包含空格的话，请使用引号括起来。<br>新建的文章将会存在<code>username/source/_posts</code>中，<code>_posts</code>就是默认模板，文章文件名称将会是<code>title.md</code>，接下来就可以打开该文件进行编辑写你的文章了。</p>
+<h2 id="2、生成静态文件"><a href="#2、生成静态文件" class="headerlink" title="2、生成静态文件"></a>2、生成静态文件</h2><p>写完文章之后执行，来生成静态网页文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo g        //hexo generate的缩写</span><br></pre></td></tr></table></figure></p>
+<h2 id="3、启动本地服务器"><a href="#3、启动本地服务器" class="headerlink" title="3、启动本地服务器"></a>3、启动本地服务器</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo s        //hexo server的缩写</span><br></pre></td></tr></table></figure>
+<p>本地服务器启动完之后就如同上面验证主题一样，访问 <a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a> 来验证一下你写的文章预览效果。</p>
+<h2 id="4、部署网站"><a href="#4、部署网站" class="headerlink" title="4、部署网站"></a>4、部署网站</h2><p>安装部署工具<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure></p>
+<p>安装完毕后打开username下的<code>_config.yml</code>文件，翻到最底部找到deploy节点编辑如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: https://github.com/YoungerLi/youngerli.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure></p>
+<p>其中<code>https://github.com/YoungerLi/youngerli.github.io.git</code>就是你GitHub中创建的仓库地址，在这复制即可<img src="http://upload-images.jianshu.io/upload_images/4120931-8525599433d095b3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="repository"><br>最后，部署网站<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo d        //hexo deploy的缩写</span><br></pre></td></tr></table></figure></p>
+<p>第一次执行这一步的时候会让你输入你的GitHub的用户名及密码，输入正确无误后执行完毕，任何人就可以访问 <a href="https://youngerli.github.io" target="_blank" rel="external">https://youngerli.github.io</a> 进入你的博客了。</p>
+<hr>
+<blockquote>
+<p><strong><em>以后每次写完文章之后依次执行以下命令就可以发布更新了</em></strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean      // 清除缓存</span><br><span class="line">$ hexo g          // 生成静态网页文件</span><br><span class="line">$ hexo d          // 将本地博客发布到github</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<h1 id="五、更多"><a href="#五、更多" class="headerlink" title="五、更多"></a>五、更多</h1><h2 id="添加阅读全文按钮"><a href="#添加阅读全文按钮" class="headerlink" title="添加阅读全文按钮"></a>添加阅读全文按钮</h2><blockquote>
+<p>因为在你的博客主页会有多篇文章，如果你想让你的文章只显示一部分，多余的可以点击阅读全文来查看，那么你需要在你的文章中添加<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--more--&gt;</span><br></pre></td></tr></table></figure></p>
+<p>其后面的部分就不会显示了，只能点击阅读全文才能看</p>
+</blockquote>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.png" alt="YoungerLi 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.png" alt="YoungerLi 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/11/15/hello-world/" rel="next" title="Hello World">
+                <i class="fa fa-chevron-left"></i> Hello World
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/header.jpg"
+                alt="YoungerLi" />
+            
+              <p class="site-author-name" itemprop="name">YoungerLi</p>
+              <p class="site-description motion-element" itemprop="description">不积跬步，无以至千里；不积小流，无以成江海</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+
+          </nav>
+
+          
+
+          <div class="links-of-author motion-element">
+            
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/YoungerLi" target="_blank" title="GitHub">
+                    
+                      <i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="http://www.jianshu.com/u/cf5abb99aba7" target="_blank" title="简书">
+                    
+                      <i class="fa fa-fw fa-book"></i>简书</a>
+                </span>
+              
+            
+          </div>
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一、前言"><span class="nav-number">1.</span> <span class="nav-text">一、前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#二、准备工作"><span class="nav-number">2.</span> <span class="nav-text">二、准备工作</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1、创建GitHub仓库"><span class="nav-number">2.1.</span> <span class="nav-text">1、创建GitHub仓库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2、安装Git"><span class="nav-number">2.2.</span> <span class="nav-text">2、安装Git</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3、安装Node-js"><span class="nav-number">2.3.</span> <span class="nav-text">3、安装Node.js</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4、安装Hexo"><span class="nav-number">2.4.</span> <span class="nav-text">4、安装Hexo</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#三、建站"><span class="nav-number">3.</span> <span class="nav-text">三、建站</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1、创建资源"><span class="nav-number">3.1.</span> <span class="nav-text">1、创建资源</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2、基础配置"><span class="nav-number">3.2.</span> <span class="nav-text">2、基础配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3、主题安装"><span class="nav-number">3.3.</span> <span class="nav-text">3、主题安装</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#四、写作"><span class="nav-number">4.</span> <span class="nav-text">四、写作</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1、新建一篇文章"><span class="nav-number">4.1.</span> <span class="nav-text">1、新建一篇文章</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2、生成静态文件"><span class="nav-number">4.2.</span> <span class="nav-text">2、生成静态文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3、启动本地服务器"><span class="nav-number">4.3.</span> <span class="nav-text">3、启动本地服务器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4、部署网站"><span class="nav-number">4.4.</span> <span class="nav-text">4、部署网站</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#五、更多"><span class="nav-number">5.</span> <span class="nav-text">五、更多</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#添加阅读全文按钮"><span class="nav-number">5.1.</span> <span class="nav-text">添加阅读全文按钮</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2015 &mdash; <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-hand-o-right"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">YoungerLi</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a></div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.3"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.3"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
