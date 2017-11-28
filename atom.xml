@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>my_杨哥</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://YoungerLi.com/"/>
+  <updated>2017-11-28T07:48:32.000Z</updated>
+  <id>http://YoungerLi.com/</id>
+  
+  <author>
+    <name>YoungerLi</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hexo免费搭建一个属于自己的博客</title>
+    <link href="http://YoungerLi.com/2017/11/21/Hexo%E5%85%8D%E8%B4%B9%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/"/>
+    <id>http://YoungerLi.com/2017/11/21/Hexo免费搭建一个属于自己的博客/</id>
+    <published>2017-11-21T03:39:09.000Z</published>
+    <updated>2017-11-28T07:48:32.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;作为一个多年的iOS开发者，而且喜欢自己没事的时候写点东西以供他人分享，都想要有一个属于自己的、网址上带有自己名字的博客，有的人用简书或者GitHub来写文章，不过那些都是第三方平台，不是自己的，只有属于自己的一个博客才会显得很酷很装逼有没有😝，OK接下来咱们开始搭建吧！&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="iOS开发" scheme="http://YoungerLi.com/categories/iOS%E5%BC%80%E5%8F%91/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://YoungerLi.com/2017/11/15/hello-world/"/>
+    <id>http://YoungerLi.com/2017/11/15/hello-world/</id>
+    <published>2017-11-15T09:52:22.000Z</published>
+    <updated>2017-11-21T07:20:05.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="iOS开发" scheme="http://YoungerLi.com/categories/iOS%E5%BC%80%E5%8F%91/"/>
+    
+    
+  </entry>
+  
+</feed>
