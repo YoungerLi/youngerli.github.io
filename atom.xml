@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://YoungerLi.com/"/>
-  <updated>2017-11-30T07:00:17.000Z</updated>
+  <updated>2017-12-02T03:19:21.000Z</updated>
   <id>http://YoungerLi.com/</id>
   
   <author>
@@ -17,11 +17,31 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Hexo的Next主题详细配置</title>
+    <link href="http://YoungerLi.com/2017/12/02/Hexo%E7%9A%84Next%E4%B8%BB%E9%A2%98%E8%AF%A6%E7%BB%86%E9%85%8D%E7%BD%AE/"/>
+    <id>http://YoungerLi.com/2017/12/02/Hexo的Next主题详细配置/</id>
+    <published>2017-12-02T03:10:21.000Z</published>
+    <updated>2017-12-02T03:19:21.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;经过一番不懈的努力，我们终于按照&lt;a href=&quot;https://youngerli.github.io/2017/11/21/Hexo免费搭建一个属于自己的博客/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo免费搭建一个属于自己的博客&lt;/a&gt;搭建好了一个属于自己的博客，并且还安装了一个Next主题，但是我们的博客一开始还是很简陋的，我们需要把她装修一下。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="工具" scheme="http://YoungerLi.com/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="Hexo" scheme="http://YoungerLi.com/tags/Hexo/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Hexo免费搭建一个属于自己的博客</title>
     <link href="http://YoungerLi.com/2017/11/21/Hexo%E5%85%8D%E8%B4%B9%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/"/>
     <id>http://YoungerLi.com/2017/11/21/Hexo免费搭建一个属于自己的博客/</id>
     <published>2017-11-21T03:39:09.000Z</published>
-    <updated>2017-11-30T07:00:17.000Z</updated>
+    <updated>2017-12-02T03:20:18.000Z</updated>
     
     <summary type="html">
     
