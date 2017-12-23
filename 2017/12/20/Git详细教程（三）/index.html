@@ -109,13 +109,13 @@
 
 
 
-<meta name="description" content="Git —— 目前世界上最先进的分布式版本控制系统，高端大气上档次！  【Git分支】">
+<meta name="description" content="Git —— 目前世界上最先进的分布式版本控制系统，高端大气上档次！  【Git分支】 【Git服务器】">
 <meta name="keywords" content="Git">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Git详细教程（三）">
 <meta property="og:url" content="http://YoungerLi.com/2017/12/20/Git详细教程（三）/index.html">
 <meta property="og:site_name" content="my_杨哥">
-<meta property="og:description" content="Git —— 目前世界上最先进的分布式版本控制系统，高端大气上档次！  【Git分支】">
+<meta property="og:description" content="Git —— 目前世界上最先进的分布式版本控制系统，高端大气上档次！  【Git分支】 【Git服务器】">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/4120931-d3b870ad472c6cc1.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/4120931-24cbb7aec30abc2d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
@@ -128,10 +128,10 @@
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/4120931-32086755a09593c3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/4120931-6e39c7f389a8cd56.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/4120931-b09d7eab2350be14.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2017-12-20T09:24:56.000Z">
+<meta property="og:updated_time" content="2017-12-21T09:23:26.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git详细教程（三）">
-<meta name="twitter:description" content="Git —— 目前世界上最先进的分布式版本控制系统，高端大气上档次！  【Git分支】">
+<meta name="twitter:description" content="Git —— 目前世界上最先进的分布式版本控制系统，高端大气上档次！  【Git分支】 【Git服务器】">
 <meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/4120931-d3b870ad472c6cc1.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 
 
@@ -441,7 +441,7 @@
         <blockquote>
 <p><strong>Git —— 目前世界上最先进的分布式版本控制系统，高端大气上档次！</strong></p>
 </blockquote>
-<center><strong>【Git分支】</strong></center>
+<center><strong>【Git分支】 【Git服务器】</strong></center>
 
 <a id="more"></a>
 <p><img src="http://upload-images.jianshu.io/upload_images/4120931-d3b870ad472c6cc1.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
@@ -461,6 +461,10 @@
 <p><img src="http://upload-images.jianshu.io/upload_images/4120931-6e39c7f389a8cd56.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="">    任何因包含合并冲突而有待解决的文件，都会以未合并状态标识出来。 Git 会在有冲突的文件中加入标准的冲突解决标记，这样你可以打开这些包含冲突的文件然后手动解决冲突，出现冲突的文件会包含一些特殊区段<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;&lt;&lt;&lt;&lt;&lt;&lt;</span><br><span class="line">=======</span><br><span class="line">&gt;&gt;&gt;&gt;&gt;&gt;&gt;</span><br></pre></td></tr></table></figure></p>
 <p>用过SVN的朋友相信都能看懂这个，手动解决完冲突，删除这些区段，用<code>$ git add</code>命令对每个冲突文件标记为已解决，再次运行<code>$ git status</code>来确认所有的冲突都已被解决<img src="http://upload-images.jianshu.io/upload_images/4120931-b09d7eab2350be14.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="">  然后，提交<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git commit -m &quot;conflict fixed&quot;</span><br></pre></td></tr></table></figure></p>
 <p>最后，删除newfunc分支<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git branch -d newfunc</span><br></pre></td></tr></table></figure></p>
+<h1 id="五、Git服务器"><a href="#五、Git服务器" class="headerlink" title="五、Git服务器"></a>五、Git服务器</h1><p>到目前为止，你基本上已经掌握了Git最常用的功能，你应该已经有办法使用Git来完成日常工作。 然而，为了使用Git协作功能，你还需要有远程的Git仓库 —— Git服务器。</p>
+<p>Git服务器哪里来呢？两种方式，一是自己搭建，二是使用三方托管。<br>如果你选择方式一，自己搭建Git服务器，搭建简单，但是对服务器的设置和维护起来会消耗你大量的时间和精力，如果你想自己搭建，可参考<a href="https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/00137583770360579bc4b458f044ce7afed3df579123eca000" target="_blank" rel="external">搭建Git服务器</a><br>你也可以选择方式二，简单、方便，托管网站有好多，比较有名的比如<a href="https://about.gitlab.com" target="_blank" rel="external">GitLab</a>、<a href="https://github.com" target="_blank" rel="external">GitHub</a>等</p>
+<hr>
+<p><strong>参考链接</strong><br><a href="https://git-scm.com/book/zh/v2" target="_blank" rel="external">Git - Book</a><br><a href="https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" target="_blank" rel="external">Git教程 - 廖雪峰的官方网站</a></p>
 <hr>
 
       
@@ -705,7 +709,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#四、分支"><span class="nav-number">1.</span> <span class="nav-text">四、分支</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#分支的新建、切换、合并、删除"><span class="nav-number">1.1.</span> <span class="nav-text">分支的新建、切换、合并、删除</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解决冲突"><span class="nav-number">1.2.</span> <span class="nav-text">解决冲突</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#四、分支"><span class="nav-number">1.</span> <span class="nav-text">四、分支</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#分支的新建、切换、合并、删除"><span class="nav-number">1.1.</span> <span class="nav-text">分支的新建、切换、合并、删除</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解决冲突"><span class="nav-number">1.2.</span> <span class="nav-text">解决冲突</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#五、Git服务器"><span class="nav-number">2.</span> <span class="nav-text">五、Git服务器</span></a></li></ol></div>
             
 
           </div>
