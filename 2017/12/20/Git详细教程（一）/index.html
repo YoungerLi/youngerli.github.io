@@ -132,7 +132,7 @@
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/4120931-77888b7560012bb3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/4120931-5b0c832397c5c5be.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/4120931-e3f60c63ab911462.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2017-12-21T09:11:23.000Z">
+<meta property="og:updated_time" content="2017-12-26T07:18:46.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git详细教程（一）">
 <meta name="twitter:description" content="Git —— 目前世界上最先进的分布式版本控制系统，高端大气上档次！  【安装Git】 【创建Git仓库】 【Git基础】">
@@ -506,12 +506,12 @@
 <p>你需要知道 <code>git checkout -- &lt;file&gt;</code> 是一个危险的命令，这很重要。 你对那个文件做的任何修改都会消失 - 你只是拷贝了另一个文件来覆盖它。 除非你确实清楚不想要那个文件了，否则不要使用这个命令。</p>
 </blockquote>
 <h3 id="退回以前的版本"><a href="#退回以前的版本" class="headerlink" title="退回以前的版本"></a>退回以前的版本</h3><p>如果你想回退到上一个版本或者以前的版本也不是不可以的，相当于时光倒退，也就是你想回到的那个版本之后所有更改的东西全部消失（此操作要谨慎）</p>
-<p>回退版本所用的参数是<code>$ git reset --hard HEAD^</code>，其中<code>HEAD^</code>代表回退到上个版本，<code>HEAD^^</code>代表回退到上上个版本，当然往上100个版本写100个^比较容易数不过来，所以写成<code>HEAD~100</code></p>
+<p>回退版本所用的命令是<code>$ git reset --hard 版本号</code>，想回到哪个版本就找到哪个版本的版本号，然后执行此命令。<br>还有一个方法<code>$ git reset --hard HEAD^</code>，是回退到上一个版本的快捷方法，此方法不需要知道版本号，用<code>HEAD^^</code>代表回退到上上个版本，依次类推，当然往上100个版本写100个^比较容易数不过来，所以写成<code>HEAD~100</code>（一般用不到），你不会一个个数上100个版本是哪个版本。<br>一般我们只会回退到上一两个个版本，不会回退太多，所以<code>$ git reset --hard HEAD^</code>用的最多。</p>
 <p>好的，现在先看一下我提交的历史，已经提交过3次了<img src="http://upload-images.jianshu.io/upload_images/4120931-5b0c832397c5c5be.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="">现在我想回退到上个版本也就是<code>second commit</code>这一版，执行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git reset --hard HEAD^</span><br></pre></td></tr></table></figure></p>
 <p>终端输出<code>HEAD is now at 98aee01 second commit</code>可以看到已经回到<code>second commit</code>了，<code>98aee01</code>就是此版本的版本号的前几位（上图中绿色长串），现在你再看看从上个版本提交之后你所更改的东西全都消失了，我们再来看看提交历史<code>$ git log</code><img src="http://upload-images.jianshu.io/upload_images/4120931-e3f60c63ab911462.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="">可以看到最后一次提交的历史都没了，我靠，那我后来改的东西怎么办，还得再重新写吗？我当初咋写的来着？忘了，擦擦擦。。。<br>别着急，给你一个后悔药，我就知道你会后悔的，让你这么不小心，都说了要谨慎的嘛，让你后来改的东西再回来，也就是再回到最后一次提交的版本，前提是你要知道最后一版的版本号，看上上图<code>third commit</code>的版本号<code>f4ab157...</code>，有了这个你就能再穿越回来了，执行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git reset --hard f4ab157</span><br></pre></td></tr></table></figure></p>
-<p>版本号没必要写全，写前六七位就可以了，Git会自动去找。当然也不能只写前一两位，因为Git可能会找到多个版本号，就无法确定是哪一个了。<br>现在再看看你的东西是不是又回来了，再<code>$ git log</code>看一下提交历史是不是也回来了，哈哈！</p>
+<p>版本号没必要写全，写前六七位就可以了，Git会自动去找。当然也不能只写前一两位，因为Git可能会找到多个版本号，就无法确定是哪一个了。<br>现在再看看你的东西是不是又回来了，<code>$ git log</code>看一下提交历史是不是也回来了，哈哈！<br>如果你把终端关闭了，这时你后悔了，想再穿越回来你就看不到最后一版的版本号了，怎么办的，用<code>$ git reflog</code>查看命令历史，根据提交说明找到最后一版的版本号就可以了。</p>
 <blockquote>
-<p>如果你把终端关闭了，这时你后悔了，想再穿越回来你就看不到最后一版的版本号了，怎么办的，用<code>$ git reflog</code>查看命令历史，根据提交说明找到最后一版的版本号就可以了。</p>
+<p>后期会用到远程服务器，以上执行的版本回退只是针对本地仓库，而服务器仓库不变，如果想同步到服务器，执行<code>$ git push -f -u origin master</code></p>
 </blockquote>
 <hr>
 <p><strong>参考链接</strong><br><a href="https://git-scm.com/book/zh/v2" target="_blank" rel="external">Git - Book</a><br><a href="https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" target="_blank" rel="external">Git教程 - 廖雪峰的官方网站</a></p>
@@ -673,7 +673,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
