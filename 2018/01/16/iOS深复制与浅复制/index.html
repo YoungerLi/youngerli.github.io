@@ -109,19 +109,19 @@
 
 
 
-<meta name="description" content="一、深复制与浅复制概念对象拷贝有两种方式：浅复制和深复制。顾名思义，浅复制，并不拷贝对象本身，仅仅是拷贝指向对象的指针；深复制是直接拷贝整个对象内存到另一块内存中。再简单些说：浅复制就是指针拷贝；深复制就是内容拷贝。">
+<meta name="description" content="一、深复制与浅复制1.概念对象拷贝有两种方式：浅复制和深复制。顾名思义，浅复制，并不拷贝对象本身，仅仅是拷贝指向对象的指针；深复制是直接拷贝整个对象内存到另一块内存中。再简单些说：浅复制就是指针拷贝；深复制就是内容拷贝。">
 <meta name="keywords" content="iOS">
 <meta property="og:type" content="article">
 <meta property="og:title" content="iOS深复制与浅复制">
 <meta property="og:url" content="http://YoungerLi.com/2018/01/16/iOS深复制与浅复制/index.html">
 <meta property="og:site_name" content="my_杨哥">
-<meta property="og:description" content="一、深复制与浅复制概念对象拷贝有两种方式：浅复制和深复制。顾名思义，浅复制，并不拷贝对象本身，仅仅是拷贝指向对象的指针；深复制是直接拷贝整个对象内存到另一块内存中。再简单些说：浅复制就是指针拷贝；深复制就是内容拷贝。">
+<meta property="og:description" content="一、深复制与浅复制1.概念对象拷贝有两种方式：浅复制和深复制。顾名思义，浅复制，并不拷贝对象本身，仅仅是拷贝指向对象的指针；深复制是直接拷贝整个对象内存到另一块内存中。再简单些说：浅复制就是指针拷贝；深复制就是内容拷贝。">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/4120931-a087a3dd7d9f0707.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2018-01-16T10:00:28.000Z">
+<meta property="og:updated_time" content="2018-03-17T02:38:13.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="iOS深复制与浅复制">
-<meta name="twitter:description" content="一、深复制与浅复制概念对象拷贝有两种方式：浅复制和深复制。顾名思义，浅复制，并不拷贝对象本身，仅仅是拷贝指向对象的指针；深复制是直接拷贝整个对象内存到另一块内存中。再简单些说：浅复制就是指针拷贝；深复制就是内容拷贝。">
+<meta name="twitter:description" content="一、深复制与浅复制1.概念对象拷贝有两种方式：浅复制和深复制。顾名思义，浅复制，并不拷贝对象本身，仅仅是拷贝指向对象的指针；深复制是直接拷贝整个对象内存到另一块内存中。再简单些说：浅复制就是指针拷贝；深复制就是内容拷贝。">
 <meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/4120931-a087a3dd7d9f0707.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 
 
@@ -417,6 +417,25 @@
           
           
           
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  1,355
+                </span>
+              
+
+              
+
+              
+            </div>
+          
 
           
 
@@ -433,11 +452,11 @@
       
 
       
-        <h1 id="一、深复制与浅复制"><a href="#一、深复制与浅复制" class="headerlink" title="一、深复制与浅复制"></a>一、深复制与浅复制</h1><h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><p>对象拷贝有两种方式：浅复制和深复制。顾名思义，浅复制，并不拷贝对象本身，仅仅是拷贝指向对象的指针；深复制是直接拷贝整个对象内存到另一块内存中。<br>再简单些说：浅复制就是指针拷贝；深复制就是内容拷贝。</p>
+        <h1 id="一、深复制与浅复制"><a href="#一、深复制与浅复制" class="headerlink" title="一、深复制与浅复制"></a>一、深复制与浅复制</h1><h2 id="1-概念"><a href="#1-概念" class="headerlink" title="1.概念"></a>1.概念</h2><p>对象拷贝有两种方式：浅复制和深复制。顾名思义，浅复制，并不拷贝对象本身，仅仅是拷贝指向对象的指针；深复制是直接拷贝整个对象内存到另一块内存中。<br>再简单些说：浅复制就是指针拷贝；深复制就是内容拷贝。</p>
 <a id="more"></a>
 <p><img src="http://upload-images.jianshu.io/upload_images/4120931-a087a3dd7d9f0707.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
-<h2 id="集合的浅复制"><a href="#集合的浅复制" class="headerlink" title="集合的浅复制"></a>集合的浅复制</h2><p>集合的浅复制有非常多种方法。当你进行浅复制时，会向原始的集合发送retain消息，引用计数加1，同时指针被拷贝到新的集合。<br>现在让我们看一些浅复制的例子：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">NSArray *shallowCopyArray = [someArray copyWithZone:nil];</span><br><span class="line">NSSet *shallowCopySet = [NSSet mutableCopyWithZone:nil];</span><br><span class="line">NSDictionary *shallowCopyDict = [[NSDictionary alloc] initWithDictionary:someDictionary copyItems:NO];</span><br></pre></td></tr></table></figure></p>
-<h2 id="集合的深复制"><a href="#集合的深复制" class="headerlink" title="集合的深复制"></a>集合的深复制</h2><p>集合的深复制有两种方法。可以用<code>initWithArray:copyItems:</code>将第二个参数设置为<code>YES</code>即可深复制，如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">NSArray *shallowCopyArray = [[NSArray alloc] initWithArray:someArray copyItems:YES];</span><br><span class="line">NSDictionary *shallowCopyDict = [[NSDictionary alloc] initWithDictionary:someDictionary copyItems:YES];</span><br></pre></td></tr></table></figure></p>
+<h2 id="2-集合的浅复制"><a href="#2-集合的浅复制" class="headerlink" title="2.集合的浅复制"></a>2.集合的浅复制</h2><p>集合的浅复制有非常多种方法。当你进行浅复制时，会向原始的集合发送retain消息，引用计数加1，同时指针被拷贝到新的集合。<br>现在让我们看一些浅复制的例子：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">NSArray *shallowCopyArray = [someArray copyWithZone:nil];</span><br><span class="line">NSSet *shallowCopySet = [NSSet mutableCopyWithZone:nil];</span><br><span class="line">NSDictionary *shallowCopyDict = [[NSDictionary alloc] initWithDictionary:someDictionary copyItems:NO];</span><br></pre></td></tr></table></figure></p>
+<h2 id="3-集合的深复制"><a href="#3-集合的深复制" class="headerlink" title="3.集合的深复制"></a>3.集合的深复制</h2><p>集合的深复制有两种方法。可以用<code>initWithArray:copyItems:</code>将第二个参数设置为<code>YES</code>即可深复制，如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">NSArray *shallowCopyArray = [[NSArray alloc] initWithArray:someArray copyItems:YES];</span><br><span class="line">NSDictionary *shallowCopyDict = [[NSDictionary alloc] initWithDictionary:someDictionary copyItems:YES];</span><br></pre></td></tr></table></figure></p>
 <p>如果你用这种方法深复制，集合里的每个对象都会收到<code>copyWithZone:</code>消息。如果集合里的对象遵循 NSCopying 协议，那么对象就会被深复制到新的集合。如果对象没有遵循 NSCopying 协议，而尝试用这种方法进行深复制，会在运行时出错。<code>copyWithZone:</code>这种拷贝方式只能够提供一层内存拷贝，而非真正的深复制。</p>
 <p>第二个方法是将集合进行归档(archive)，然后解档(unarchive)，如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">NSArray *trueDeepCopyArray = [NSKeyedUnarchiver unarchiveObjectWithData:[NSKeyedArchiver archivedDataWithRootObject:oldArray]];</span><br></pre></td></tr></table></figure></p>
 <h1 id="二、copy与mutableCopy"><a href="#二、copy与mutableCopy" class="headerlink" title="二、copy与mutableCopy"></a>二、copy与mutableCopy</h1><p>不管是集合类对象，还是非集合类对象，接收到copy和mutableCopy消息时，都遵循以下准则：</p>
@@ -446,7 +465,7 @@
 <li>mutableCopy返回mutable对象；</li>
 </ul>
 <p>下面将针对非集合类对象和集合类对象的copy和mutableCopy方法进行具体的阐述</p>
-<h2 id="非集合类对象的copy与mutableCopy"><a href="#非集合类对象的copy与mutableCopy" class="headerlink" title="非集合类对象的copy与mutableCopy"></a>非集合类对象的copy与mutableCopy</h2><blockquote>
+<h2 id="1-非集合类对象的copy与mutableCopy"><a href="#1-非集合类对象的copy与mutableCopy" class="headerlink" title="1.非集合类对象的copy与mutableCopy"></a>1.非集合类对象的copy与mutableCopy</h2><blockquote>
 <p>系统非集合类对象指的是 NSString, NSNumber … 之类的对象。</p>
 </blockquote>
 <p>下面先看个非集合类unmutable对象拷贝的例子<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">NSString *string = @&quot;origin&quot;;</span><br><span class="line">NSString *stringCopy = [string copy];</span><br><span class="line">NSMutableString *stringMCopy = [string mutableCopy];</span><br></pre></td></tr></table></figure></p>
@@ -459,7 +478,7 @@
 <blockquote>
 <p>在非集合类对象中：<br>对unmutable对象进行copy操作是指针复制，mutableCopy操作是内容复制；<br>对mutable对象进行copy和mutableCopy都是内容复制。<br>用代码简单表示如下：<br>[unmutableObject copy] // 浅复制<br>[unmutableObject mutableCopy] //深复制<br>[mutableObject copy] //深复制<br>[mutableObject mutableCopy] //深复制</p>
 </blockquote>
-<h2 id="集合类对象的copy与mutableCopy"><a href="#集合类对象的copy与mutableCopy" class="headerlink" title="集合类对象的copy与mutableCopy"></a>集合类对象的copy与mutableCopy</h2><blockquote>
+<h2 id="2-集合类对象的copy与mutableCopy"><a href="#2-集合类对象的copy与mutableCopy" class="headerlink" title="2.集合类对象的copy与mutableCopy"></a>2.集合类对象的copy与mutableCopy</h2><blockquote>
 <p>集合类对象是指NSArray、NSDictionary、NSSet … 之类的对象。</p>
 </blockquote>
 <p>下面先看集合类unmutable对象使用copy和mutableCopy的一个例子：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">NSArray *array = @[@[@&quot;a&quot;, @&quot;b&quot;], @[@&quot;c&quot;, @&quot;d&quot;]];</span><br><span class="line">NSArray *arrayCopy = [array copy];</span><br><span class="line">NSMutableArray *arrayMCopy = [array mutableCopy];</span><br></pre></td></tr></table></figure></p>
@@ -547,6 +566,10 @@
 
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/2018/03/13/2018-iOS开发学习与进阶/" rel="prev" title="2018-iOS开发学习与进阶">
+                2018-iOS开发学习与进阶 <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
       
@@ -626,7 +649,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -716,7 +739,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一、深复制与浅复制"><span class="nav-number">1.</span> <span class="nav-text">一、深复制与浅复制</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#概念"><span class="nav-number">1.1.</span> <span class="nav-text">概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#集合的浅复制"><span class="nav-number">1.2.</span> <span class="nav-text">集合的浅复制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#集合的深复制"><span class="nav-number">1.3.</span> <span class="nav-text">集合的深复制</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#二、copy与mutableCopy"><span class="nav-number">2.</span> <span class="nav-text">二、copy与mutableCopy</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#非集合类对象的copy与mutableCopy"><span class="nav-number">2.1.</span> <span class="nav-text">非集合类对象的copy与mutableCopy</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#集合类对象的copy与mutableCopy"><span class="nav-number">2.2.</span> <span class="nav-text">集合类对象的copy与mutableCopy</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一、深复制与浅复制"><span class="nav-text">一、深复制与浅复制</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-概念"><span class="nav-text">1.概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-集合的浅复制"><span class="nav-text">2.集合的浅复制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-集合的深复制"><span class="nav-text">3.集合的深复制</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#二、copy与mutableCopy"><span class="nav-text">二、copy与mutableCopy</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-非集合类对象的copy与mutableCopy"><span class="nav-text">1.非集合类对象的copy与mutableCopy</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-集合类对象的copy与mutableCopy"><span class="nav-text">2.集合类对象的copy与mutableCopy</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -746,15 +769,9 @@
 </div>
 
 
-  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
 
 
 
-  <span class="post-meta-divider">|</span>
-
-
-
-  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a></div>
 
 
 <div>
