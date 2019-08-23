@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://YoungerLi.com/"/>
-  <updated>2019-08-23T08:15:10.550Z</updated>
+  <updated>2019-08-23T08:36:36.560Z</updated>
   <id>http://YoungerLi.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://YoungerLi.com/2019/08/23/%E5%A5%BD%E6%B6%88%E6%81%AF/"/>
     <id>http://YoungerLi.com/2019/08/23/好消息/</id>
     <published>2019-08-23T08:12:35.000Z</published>
-    <updated>2019-08-23T08:15:10.550Z</updated>
+    <updated>2019-08-23T08:36:36.560Z</updated>
     
     <summary type="html">
     
@@ -36,6 +36,10 @@
     
     </summary>
     
+      <category term="其他" scheme="http://YoungerLi.com/categories/%E5%85%B6%E4%BB%96/"/>
+    
+    
+      <category term="other" scheme="http://YoungerLi.com/tags/other/"/>
     
   </entry>
   
