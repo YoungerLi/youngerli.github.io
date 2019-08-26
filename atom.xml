@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://YoungerLi.com/"/>
-  <updated>2019-08-23T09:00:58.018Z</updated>
+  <updated>2019-08-26T10:23:22.953Z</updated>
   <id>http://YoungerLi.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Git忽略文件之.gitignore的使用</title>
+    <link href="http://YoungerLi.com/2019/08/26/Git%E5%BF%BD%E7%95%A5%E6%96%87%E4%BB%B6%E4%B9%8B-gitignore%E7%9A%84%E4%BD%BF%E7%94%A8/"/>
+    <id>http://YoungerLi.com/2019/08/26/Git忽略文件之-gitignore的使用/</id>
+    <published>2019-08-26T09:41:24.000Z</published>
+    <updated>2019-08-26T10:23:22.953Z</updated>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;在使用Git的过程中，我们喜欢有的文件比如日志，临时文件，编译的中间文件等不要提交到代码仓库，这时就要设置相应的忽略规则，来忽略这些文件的提交。&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="Git" scheme="http://YoungerLi.com/categories/Git/"/>
+    
+    
+      <category term="Git" scheme="http://YoungerLi.com/tags/Git/"/>
+    
+  </entry>
   
   <entry>
     <title>好消息</title>
